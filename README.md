@@ -4,6 +4,7 @@
 The `keyof` keyword is used to get a **union type** of all property names (keys) of a given type.
 
 ### Example
+```typescript
 type Person = {
   name: string;
   age: number;
@@ -23,7 +24,7 @@ There are two types of enums in TypeScript:
 2. **String Enums**: The members of a string enum are manually assigned string values.
 
 ### Numeric Enum Example
-
+```typescript
 enum Direction {
   Up = 1,
   Down,
@@ -37,6 +38,7 @@ console.log(Direction.Left);  // Output: 3
 console.log(Direction.Right); // Output: 4
 
 ### String Enum Example
+```typescript
 enum Status {
   Pending = "PENDING",
   InProgress = "IN_PROGRESS",

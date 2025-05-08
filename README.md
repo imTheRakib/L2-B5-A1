@@ -1,7 +1,7 @@
 # About Typescript
-## `keyof` in TypeScript
+## keyof in TypeScript
 
-The `keyof` keyword is used to get a **union type** of all property names (keys) of a given type.
+keyof is a keyword in TypeScript which is used to extract the key type from an object type. When used on an object type with explicit keys, keyof creates a union type with those keys.
 
 ### Example
 ```typescript
@@ -19,7 +19,7 @@ In TypeScript, **enums** are a way to define a set of named constants. These con
 
 There are two types of enums in TypeScript:
 
-1. **Numeric Enums**: The members of a numeric enum are automatically assigned incremental values, starting from `0` by default.
+1. **Numeric Enums**: The members of a numeric enum are automatically assigned incremental values, starting from 0 by default.
 
 2. **String Enums**: The members of a string enum are manually assigned string values.
 
@@ -36,7 +36,7 @@ console.log(Direction.Up);    // Output: 1
 console.log(Direction.Down);  // Output: 2
 console.log(Direction.Left);  // Output: 3
 console.log(Direction.Right); // Output: 4
-
+```
 ### String Enum Example
 ```typescript
 enum Status {
@@ -48,5 +48,5 @@ enum Status {
 console.log(Status.Pending);     // Output: "PENDING"
 console.log(Status.InProgress);  // Output: "IN_PROGRESS"
 console.log(Status.Completed);   // Output: "COMPLETED"
-
+```
 

@@ -12,7 +12,7 @@ type Person = {
 
 type PersonKeys = keyof Person;
 // PersonKeys is "name" | "age"
-
+###
 ## Enums in TypeScript
 
 In TypeScript, **enums** are a way to define a set of named constants. These constants can be either numeric or string-based. Enums help to create a meaningful set of values that can be used in your code for readability and maintainability.

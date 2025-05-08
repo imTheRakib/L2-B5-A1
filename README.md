@@ -1,17 +1,36 @@
-# About Typescript
+# Blog of keyof and enum
 ## keyof in TypeScript
 
 keyof is a keyword in TypeScript which is used to extract the key type from an object type. When used on an object type with explicit keys, keyof creates a union type with those keys.
 
 ### Example
 ```typescript
-type Person = {
+interface Dog {
   name: string;
   age: number;
+  breed: string;
+}
+
+// keyof creates a union type of all property names
+type DogKeys = keyof Dog; 
+// Equivalent to: "name" | "age" | "breed"
+
+function printDogInfo(dog: Dog, key: DogKeys) {
+  console.log(`${key}: ${dog[key]}`);
+}
+
+const myDog: Dog = {
+  name: "Rex",
+  age: 3,
+  breed: "Golden Retriever"
 };
 
-type PersonKeys = keyof Person;
-// PersonKeys is "name" | "age"
+// These work because the keys exist on Dog
+printDogInfo(myDog, "name");  // Output: "name: Rex"
+printDogInfo(myDog, "age");   // Output: "age: 3"
+
+// This would cause a TypeScript error because "color" isn't a Dog property
+// printDogInfo(myDog, "color");  // Error!
 ```
 ## Enums in TypeScript
 

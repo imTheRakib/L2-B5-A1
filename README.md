@@ -1,7 +1,7 @@
 # Blog of keyof and enum
 ## keyof in TypeScript
 
-keyof is a keyword in TypeScript which is used to extract the key type from an object type. When used on an object type with explicit keys, keyof creates a union type with those keys.
+The keyof operator in TypeScript is a type operator that creates a union type of all known, public property names of a given type.
 
 ### Example
 ```typescript

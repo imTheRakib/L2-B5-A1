@@ -1,9 +1,9 @@
 # About Typescript
-## 🔑 `keyof` in TypeScript
+## `keyof` in TypeScript
 
 The `keyof` keyword is used to get a **union type** of all property names (keys) of a given type.
 
-### ✅ Example
+### Example
 ```ts
 type Person = {
   name: string;
